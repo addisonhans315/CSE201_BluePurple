@@ -18,11 +18,4 @@ public class User {
 	public int getPermissions() {
 		return permissions;
 	}
-
-	// constructor to create users
-	// instance variables include username, password, and userLevel which determines
-	// user permission. 0 = user, 1 = moderator, 2 = admin
-	// have methods to do things based on user permissions (admins can add and
-	// change app details)
-	// moderators can do certain things
 }
