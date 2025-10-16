@@ -1,5 +1,7 @@
 package appStore;
 
+import java.util.ArrayList;
+
 public class App {
 	// attributes
 	private int price;
@@ -7,8 +9,9 @@ public class App {
 	private String name;
 	private String type;
 	private String logo;  // path to img file
+	private ArrayList<Review> reviews;
 	
-	public App(int price, String developer, String name, String type, String logo) throws Exception{
+	public App(int price, String developer, String name, String type, String logo, ArrayList<Review> reviews) throws Exception{
 		this.price = price;
 		if (price < 0) {
 			throw new Exception("Invalid price");
@@ -17,7 +20,8 @@ public class App {
 		this.name = name;
 		this.type = type;
 		this.logo = logo;
-	}
+		this.reviews = reviews;
+		}
 	
 	// Getters + Setters
 	public int getPrice() {
@@ -53,6 +57,15 @@ public class App {
 	public void setLogo(String logo) {
 		this.logo = logo;
 	}
+	public ArrayList<Review> getReviews() {
+		return reviews;
+	}
+	public void setReviews(ArrayList<Review> reviews) {
+		this.reviews = reviews;
+	}
 	
+	public void addReview(Review review) {
+		reviews.add(review);
+	}
 	
 }
