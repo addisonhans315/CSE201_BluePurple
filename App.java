@@ -8,6 +8,7 @@ public class App {
 	private String developer;
 	private String name;
 	private String type;
+	private String details;
 	private String logo;  // path to img file
 	private ArrayList<Review> reviews;
 	
@@ -51,6 +52,12 @@ public class App {
 	public void setType(String type) {
 		this.type = type;
 	}
+	public String getDetails() {
+		return details;
+	}
+	public void setDetails(String details) {
+		this.details = details;
+	}
 	public String getLogo() {
 		return logo;
 	}
@@ -69,3 +76,4 @@ public class App {
 	}
 	
 }
+
