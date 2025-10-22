@@ -20,7 +20,7 @@ public class UserInterface {
 		if (usernameFile.equals(username) && passwordFile.equals(password)) {
 			System.out.println("You are logged in!");
 		} else {
-			System.out.println("Login unsuccesful :(");
+			System.out.println("Login unsuccessful :(");
 		}
 		input.close();
 
