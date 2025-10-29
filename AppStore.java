@@ -1,6 +1,9 @@
 package appStore;
 
 import java.util.*;
+import java.io.*;
+import java.sql.*;
+
 public class AppStore {
 	// attributes
 	private ArrayList<App> apps;
@@ -31,6 +34,26 @@ public class AppStore {
 	}
 	public void setFilters(String[] filters) {
 		this.filters = filters;
+	}
+	
+	public void loadApps() throws Exception {
+		String line;
+        String appsFile = "Apps.txt";
+        String delimiter = ",";
+        try (BufferedReader br = new BufferedReader(new FileReader(appsFile))) {
+            while ((line = br.readLine()) != null) {
+            	ArrayList<String> d = new ArrayList<String>();
+                String[] data = line.split(delimiter);
+                for (String item : data) {
+                    d.add(item);
+                }
+                Double p = Double.parseDouble(d.get(3));
+                App a = new App(p, d.get(5), d.get(0), d.get(2), d.get(1), new ArrayList<Review>());
+                apps.add(a);
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
 	}
 
 }
