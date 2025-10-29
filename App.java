@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class App {
 	// attributes
-	private int price;
+	private double price;
 	private String developer;
 	private String name;
 	private String type;
@@ -13,7 +13,7 @@ public class App {
 	private String logo;  // path to img file
 	private ArrayList<Review> reviews;
 	
-	public App(int price, String developer, String name, String type, 
+	public App(double price, String developer, String name, String type, 
 			String logo, ArrayList<Review> reviews) throws Exception{
 		this.price = price;
 		if (price < 0) {
@@ -27,10 +27,10 @@ public class App {
 		}
 	
 	// Getters + Setters
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) throws Exception{
+	public void setPrice(double price) throws Exception{
 		if (price < 0) {
 			throw new Exception("Invalid price");
 		}
