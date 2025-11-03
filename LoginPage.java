@@ -88,41 +88,20 @@ public class LoginPage {
 		// Add Button Functionality
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Scanner input = null;
-				try {
-					input = new Scanner(new File("users.txt"));
-				} catch (FileNotFoundException e1) {
-					e1.printStackTrace();
-				}
-				
 				String username = userField.getText().trim();
 				String password = new String(passField.getPassword()).trim();
-				Boolean found = false;
-				int status = 0;
-				
-				while (input.hasNext()) {
-					String usernameFile = input.next();
-					String passwordFile = input.next();
-					int val = input.nextInt();
-					
-					if (username.equals(usernameFile) && password.equals(passwordFile)) {
-						found = true;
-						status = val;
-						break;
-					}
-					
-				}
 
-				if (found) {
+				verification verifyUser = new verification(username, password, "users.txt");
+
+				if (verifyUser.verify()) {
 					messageLabel.setForeground(Color.BLACK);
 					messageLabel.setText("Login Successful! Welcome, " + username + "!");
 					frame.dispose();
-					new HomePage(status);
+					new HomePage(verifyUser.getStatus());  // Pass user status
 				} else {
 					messageLabel.setForeground(Color.RED);
 					messageLabel.setText("Invalid username or password.");
 				}
-
 			}
 
 		});
