@@ -122,8 +122,8 @@
   {
     "Name": "ESPN: Live Sports & Scores",
     "image path": "",
-    "type": 0,
-    "price": "Sports",
+    "type": "Sports",
+    "price": 0,
     "details": "All of ESPN. All in One Place",
     "developer": "Disney"
   },
