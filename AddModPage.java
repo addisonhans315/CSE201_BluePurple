@@ -44,20 +44,20 @@ public class AddModPage {
 		frame.getContentPane().setBackground(customLightGray);
 
 		// Title
-		titleLabel.setBounds(0, 20, boardWidth, 50);
+		titleLabel.setBounds(0, 50, boardWidth, 50);
 		titleLabel.setFont(new Font("Arial", Font.BOLD, 32));
 		titleLabel.setForeground(customBlack);
 		frame.add(titleLabel);
 
 		// Labels & Fields
-		usernameLabel.setBounds(80, 90, 120, 30);
+		usernameLabel.setBounds(80, 120, 120, 30);
 		frame.add(usernameLabel);
-		usernameField.setBounds(210, 90, 300, 30);
+		usernameField.setBounds(210, 120, 300, 30);
 		frame.add(usernameField);
 
-		passwordLabel.setBounds(80, 130, 120, 30);
+		passwordLabel.setBounds(80, 160, 120, 30);
 		frame.add(passwordLabel);
-		passwordField.setBounds(210, 130, 300, 30);
+		passwordField.setBounds(210, 160, 300, 30);
 		frame.add(passwordField);
 
 		// Submit Button

@@ -26,7 +26,7 @@ public class LoginPage {
 	JPasswordField passField = new JPasswordField();
 	JButton loginButton = new JButton("Login");
 	JButton guestButton = new JButton("Guest");
-	JLabel messageLabel = new JLabel("Username: bluepurple, Password: isthebest", JLabel.CENTER);
+	JLabel messageLabel = new JLabel("Username: cookece2, Password: password", JLabel.CENTER);
 
 	public LoginPage() throws Exception{
 		frame.setSize(boardWidth, boardHeight);
