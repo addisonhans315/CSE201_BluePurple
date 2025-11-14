@@ -26,6 +26,7 @@ public class HomePage {
     JButton acceptAppButton = new JButton("Add App");
     JButton nextButton = new JButton(">");
     JButton prevButton = new JButton("<");
+    JButton addModButton = new JButton("Add Mod");
 
     java.util.List<App> apps = new ArrayList<>();
     private int index = 0;
@@ -52,6 +53,13 @@ public class HomePage {
         searchButton.setForeground(Color.WHITE);
         searchButton.setBorder(new LineBorder(customBlack));
         frame.add(searchButton);
+        
+        addModButton.setBounds(20, 20, 80, 30);
+        addModButton.setBackground(customOrange);
+        addModButton.setForeground(Color.WHITE);
+        addModButton.setBorder(new LineBorder(customBlack));
+        
+        if (status == ADMIN) frame.add(addModButton);
 
         appSubmissionButton.setBounds(boardWidth - 360, 20, 90, 30);
         appSubmissionButton.setBackground(customOrange);
@@ -64,8 +72,7 @@ public class HomePage {
         acceptAppButton.setForeground(Color.WHITE);
         acceptAppButton.setBorder(new LineBorder(customBlack));
 
-        if (status == ADMIN || status == MODERATOR)
-            frame.add(acceptAppButton);
+        if (status == ADMIN || status == MODERATOR) frame.add(acceptAppButton);
 
         appGridPanel.setBounds(45, 80, 695, 460);
         appGridPanel.setBackground(customDarkGray);
@@ -107,6 +114,12 @@ public class HomePage {
         appSubmissionButton.addActionListener(e -> {
             frame.dispose();
             new AppSubmissionPage(status, this);
+        });
+        
+     // add moderator page
+        addModButton.addActionListener(e -> {
+            frame.dispose();
+            new AddModPage(status);
         });
         
         // App approval
