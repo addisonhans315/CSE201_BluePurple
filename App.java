@@ -1,87 +1,48 @@
-package appStore;
-
-import java.util.ArrayList;
-import java.awt.*;
-
 public class App {
-	// attributes
-	private double price;
-	private String developer;
-	private String name;
-	private String type;
-	private String details;
-	private String logo;  // path to img file
-	private ArrayList<Review> reviews;
-	
-	public App(double price, String developer, String name, String type, 
-			String logo, ArrayList<Review> reviews) throws Exception{
-		this.price = price;
-		if (price < 0) {
-			throw new Exception("Invalid price");
-		}
-		this.developer = developer;
-		this.name = name;
-		this.type = type;
-		this.logo = logo;
-		this.reviews = reviews;
-		}
-	
-	// Getters + Setters
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) throws Exception{
-		if (price < 0) {
-			throw new Exception("Invalid price");
-		}
-		this.price = price;
-	}
-	public String getDeveloper() {
-		return developer;
-	}
-	public void setDeveloper(String developer) {
-		this.developer = developer;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public String getDetails() {
-		return details;
-	}
-	public void setDetails(String details) {
-		this.details = details;
-	}
-	public String getLogo() {
-		return logo;
-	}
-	public void setLogo(String logo) {
-		this.logo = logo;
-	}
-	public ArrayList<Review> getReviews() {
-		return reviews;
-	}
-	public void setReviews(ArrayList<Review> reviews) {
-		this.reviews = reviews;
-	}
-	
-	public void addReview(Review review) {
-		reviews.add(review);
-	}
-	public String displayPrice() {
-		if (price == 0) {
-			return "Free";
-		} else {
-			return "$" + price;
-		}
-	}
-	
+    private String name;
+    private String imagePath;
+    private String type;
+    private String price;
+    private String details;
+    private String developer;
+
+    public App(String name, String imagePath, String type, String price, String details, String developer) {
+        this.name = name;
+        this.imagePath = imagePath;
+        this.type = type;
+        this.price = price;
+        this.details = details;
+        this.developer = developer;
+    }
+
+    // Getters
+    public String getName() { 
+    	return name; 
+    }
+    
+    public String getImagePath() { 
+    	return imagePath; 
+    }
+    
+    public String getType() { 
+    	return type; 	
+    }
+    
+    public String getPrice() { 
+    	return price; 
+    }
+    
+    public String getDetails() { 
+    	return details; 
+    }
+    
+    public String getDeveloper() { 
+    	return developer; 
+    }
+
+    @Override
+    public String toString() {
+        if (price.equals("0.0")) return name + " Free";
+    	return name + price;
+    }
 }

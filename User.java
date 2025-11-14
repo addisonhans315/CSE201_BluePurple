@@ -1,5 +1,3 @@
-package appStore;
-
 import java.util.*;
 
 public class User {

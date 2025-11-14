@@ -2,40 +2,46 @@ import java.util.Scanner;
 import java.io.*;
 
 public class verification {
-	
-	String user;
-	String pass;
-	String textFile;
-	int status;
-	Boolean found = false;
-	
-	public verification(String user, String pass, String textFile) {
-		Scanner input = null;
-		try {
-			input = new Scanner(new File(textFile));
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
 
-		while (input.hasNext()) {
-			String usernameFile = input.next();
-			String passwordFile = input.next();
-			int val = input.nextInt();
+    String user;
+    String pass;
+    String textFile;
+    int status;
+    Boolean found = false;
 
-			if (user.equals(usernameFile) && pass.equals(passwordFile)) {
-				found = true;
-				status = val;
-				break;
-			}
+    public verification(String user, String pass, String textFile) {
+        this.user = user;
+        this.pass = pass;
+        this.textFile = textFile;
 
-		}
-	}
-	
-	public int getStatus() {
-		return status;
-	}
-	
-	public Boolean verify() {
-		return found;
-	}
+        Scanner input = null;
+        try {
+            input = new Scanner(new File(textFile));
+        } catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+            return;
+        }
+
+        while (input.hasNext()) {
+            String usernameFile = input.next();
+            String passwordFile = input.next();
+            int val = input.nextInt();
+
+            if (user.equals(usernameFile) && pass.equals(passwordFile)) {
+                found = true;
+                status = val;
+                break;
+            }
+        }
+
+        input.close();
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public Boolean verify() {
+        return found;
+    }
 }

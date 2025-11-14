@@ -26,9 +26,9 @@ public class LoginPage {
 	JPasswordField passField = new JPasswordField();
 	JButton loginButton = new JButton("Login");
 	JButton guestButton = new JButton("Guest");
-	JLabel messageLabel = new JLabel("Username: user, Password: password", JLabel.CENTER);
+	JLabel messageLabel = new JLabel("Username: bluepurple, Password: isthebest", JLabel.CENTER);
 
-	public LoginPage() {
+	public LoginPage() throws Exception{
 		frame.setSize(boardWidth, boardHeight);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
@@ -97,7 +97,11 @@ public class LoginPage {
 					messageLabel.setForeground(Color.BLACK);
 					messageLabel.setText("Login Successful! Welcome, " + username + "!");
 					frame.dispose();
-					new HomePage(verifyUser.getStatus());  // Pass user status
+					try {
+						new HomePage(verifyUser.getStatus());
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}  // Pass user status
 				} else {
 					messageLabel.setForeground(Color.RED);
 					messageLabel.setText("Invalid username or password.");
@@ -109,7 +113,11 @@ public class LoginPage {
 		guestButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				new HomePage(0);
+				try {
+					new HomePage(0);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
 			}
 		});
 

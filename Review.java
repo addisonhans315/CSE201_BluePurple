@@ -1,5 +1,3 @@
-package appStore;
-
 public class Review {
 	private int numStars;
 	private String review;
