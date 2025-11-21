@@ -1,177 +1,169 @@
 [
   {
     "Name": "Camera",
-    "image path": "",
+    "image path": "/images/camera.png",
     "type": "Photo & Video",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Take stunning photos & Videos",
     "developer": "Apple"
   },
   {
     "Name": "Clock",
-    "image path": "",
+    "image path": "/images/clock.png",
     "type": "Utilities",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Tell the time",
     "developer": "Apple"
   },
   {
     "Name": "Messages",
-    "image path": "",
+    "image path": "/images/messages.png",
     "type": "Social Networking",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Send messages to anyone anywhere",
     "developer": "Apple"
   },
   {
     "Name": "Instagram",
-    "image path": "",
+    "image path": "/images/insta.png",
     "type": "Photo & Video",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Connect with friends and share moments with others",
     "developer": "Instagram Inc."
   },
   {
     "Name": "TikTok",
-    "image path": "",
+    "image path": "/images/tiktok.png",
     "type": "Entertainment",
-    "price": 0.0,
+    "price": "0.0",
     "details": "TikTok is THE destination for mobile videos",
     "developer": "TikTok Ltd."
   },
   {
     "Name": "Snapchat",
-    "image path": "",
+    "image path": "/images/snap.png",
     "type": "Photo & Video",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Send messages to anyone anywhere and share moments with your peers",
     "developer": "Snap Inc."
   },
   {
     "Name": "Bloons TD 6",
-    "image path": "",
+    "image path": "/images/bloons.png",
     "type": "Action",
-    "price": 6.99,
+    "price": "6.99",
     "details": "Craft your perfect defense from a combination of powerful Monkey Towers to pop every last invading Bloon!",
     "developer": "Ninja Kiwi"
   },
   {
     "Name": "Minecraft",
-    "image path": "",
+    "image path": "/images/minecraft.png",
     "type": "Adventure",
-    "price": 6.99,
+    "price": "6.99",
     "details": "Online multiplayer game with survival & creative online modes",
     "developer": "Mojang"
   },
   {
     "Name": "Weather",
-    "image path": "",
+    "image path": "/images/weather.png",
     "type": "Weather",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Stay informed about conditions near you!",
     "developer": "Apple"
   },
   {
-    "Name": "Duo Mobile",
-    "image path": "",
-    "type": "Business",
-    "price": 0.0,
-    "details": "two-factor authentication service to make logins more secure",
-    "developer": "Duo Security LLC"
-  },
-  {
     "Name": "Grubhub",
-    "image path": "",
+    "image path": "/images/grub.png",
     "type": "Food & Drink",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Order food delivery from thousands of restaurants",
     "developer": "GrubHub.com"
   },
   {
     "Name": "Calculator",
-    "image path": "",
+    "image path": "/images/calc.png",
     "type": "Utilities",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Type out math for quick solutions",
     "developer": "Apple"
   },
   {
     "Name": "Notes",
-    "image path": "",
+    "image path": "/images/notes.png",
     "type": "Productivity",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Jot down quick thoughts or save longer notes",
     "developer": "Apple"
   },
   {
     "Name": "Amazon Shopping",
-    "image path": "",
+    "image path": "/images/amzn.png",
     "type": "Shopping",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Amazon Shopping helps make shopping on Amazon faster and easier",
     "developer": "AMZN Mobile LLC"
   },
   {
     "Name": "Chick-fil-A",
-    "image path": "",
+    "image path": "/images/cfa.png",
     "type": "Food & Drink",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Find a restaurant near you and order ahead",
     "developer": "Chick-fil-A Inc."
   },
   {
     "Name": "ESPN: Live Sports & Scores",
-    "image path": "",
+    "image path": "/images/espn.png",
     "type": "Sports",
-    "price": 0.0,
+    "price": "0.0",
     "details": "All of ESPN. All in One Place",
     "developer": "Disney"
   },
   {
     "Name": "LinkedIn: Network & Job Finder",
-    "image path": "",
+    "image path": "/images/linkedin.png",
     "type": "Business",
-    "price": 0.0,
+    "price": "0.0",
     "details": "LinkedIn is one of the largest social networking apps for online job searches that also provides content that can help you grow",
     "developer": "LinkedIn Corporation"
   },
   {
     "Name": "Canvas by Instructure",
-    "image path": "",
+    "image path": "/images/canvas.png",
     "type": "Education",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Stay connected to your courses with the official Canvas app for learners",
     "developer": "Instructure Inc."
   },
   {
     "Name": "Panera Bread",
-    "image path": "",
+    "image path": "/images/panera.png",
     "type": "Food & Drink",
-    "price": 0.0,
+    "price": "0.0",
     "details": "The Panera Bread app is like having a mini-Panera in your pocket",
     "developer": "Panera Bread"
   },
   {
     "Name": "Clash Royale",
-    "image path": "",
+    "image path": "/images/clash.png",
     "type": "Action",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Build your battle deck and outsmart the enemy in fast real-time battles",
     "developer": "Supercell"
   },
   {
     "Name": "PNC Mobile Banking",
-    "image path": "",
+    "image path": "/images/pnc.png",
     "type": "Finance",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Check balances & recent transactions",
     "developer": "PNC Bank N.A."
   },
   {
     "Name": "Venmo",
-    "image path": "",
+    "image path": "/images/venmo.png",
     "type": "Finance",
-    "price": 0.0,
+    "price": "0.0",
     "details": "Pay and get paid for anything from your share of rent to a gift",
     "developer": "Venmo"
   }
