@@ -8,6 +8,7 @@ public class HomePage {
 
     int ADMIN = 2;
     int MODERATOR = 1;
+    int GUEST = 0;
 
     int boardWidth = 800;
     int boardHeight = 600;
@@ -27,6 +28,7 @@ public class HomePage {
     JButton nextButton = new JButton(">");
     JButton prevButton = new JButton("<");
     JButton addModButton = new JButton("Add Mod");
+    JButton returnToLoginPage = new JButton("Login In");
 
     java.util.List<App> apps = new ArrayList<>();
     private int index = 0;
@@ -60,6 +62,13 @@ public class HomePage {
         addModButton.setBorder(new LineBorder(customBlack));
         
         if (status == ADMIN) frame.add(addModButton);
+        
+        returnToLoginPage.setBounds(20, 20, 80, 30);
+        returnToLoginPage.setBackground(customOrange);
+        returnToLoginPage.setForeground(Color.WHITE);
+        returnToLoginPage.setBorder(new LineBorder(customBlack));
+        
+        if (status == GUEST) frame.add(returnToLoginPage);
 
         appSubmissionButton.setBounds(boardWidth - 360, 20, 90, 30);
         appSubmissionButton.setBackground(customOrange);
@@ -114,6 +123,16 @@ public class HomePage {
         appSubmissionButton.addActionListener(e -> {
             frame.dispose();
             new AppSubmissionPage(status, this);
+        });
+        
+     // return to login page
+        returnToLoginPage.addActionListener(e -> {
+            frame.dispose();
+            try {
+				new LoginPage();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
         });
         
      // add moderator page
@@ -200,6 +219,7 @@ public class HomePage {
         for (App a : apps) {
             if (a.getName().toLowerCase().contains(query) ||
                 a.getType().toLowerCase().contains(query) ||
+                a.getPrice().toLowerCase().contains(query) ||
                 a.getDeveloper().toLowerCase().contains(query)) {
 
                 filtered.add(a);
