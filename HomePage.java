@@ -28,7 +28,7 @@ public class HomePage {
     JButton nextButton = new JButton(">");
     JButton prevButton = new JButton("<");
     JButton addModButton = new JButton("Add Mod");
-    JButton returnToLoginPage = new JButton("Login In");
+    JButton returnToLoginPage = new JButton("Login");
 
     java.util.List<App> apps = new ArrayList<>();
     private int index = 0;
